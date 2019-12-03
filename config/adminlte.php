@@ -13,11 +13,11 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'ImóvelSJC',
 
-    'title_prefix' => '',
+    'title_prefix' => '[',
 
-    'title_postfix' => '',
+    'title_postfix' => ']',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Imóvel</b>SJC',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<b>Imo</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -75,27 +75,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Control Sidebar (Right Sidebar)
-    |--------------------------------------------------------------------------
-    |
-    | Here we have the option to enable a right sidebar.
-    | When active, you can use @section('right-sidebar')
-    | The icon you configured will be displayed at the end of the top menu,
-    | and will show/hide de sidebar.
-    | The slide option will slide the sidebar over the content, while false
-    | will push the content, and have no animation.
-    | You can also choose the sidebar theme (dark or light).
-    | The right Sidebar can only be used if layout is not top-nav.
-    |
-    */
-
-    'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
-    'right_sidebar_slide' => true,
-
-    /*
-    |--------------------------------------------------------------------------
     | URLs
     |--------------------------------------------------------------------------
     |
@@ -127,35 +106,36 @@ return [
     | layout. The 'can' is a filter on Laravel's built in Gate functionality.
     */
 
-   'menu' => [
+    'menu' => [
         ['header' => 'main_navigation'],
         [
-            'text' => 'Corretores',
-            'icon' => 'fas fa-fw fa-users',
+            'text'        => 'Corretores',
+            'icon'        => 'fas fa-fw fa-users',
             'submenu' => [
                 [
                     'text' => 'Listar Corretores',
-                    'ícone' => 'fas fa-fw fa-list-ul',
+                    'icon' => 'fas fa-fw fa-bars',
                     'route' => 'corretores.index',
                 ],
                 [
-                    'text' => 'Incluir corretor',
-                    'ícone' => 'fas fa-fw fa-user-plus',
+                    'text' => 'Incluir Corretor',
+                    'icon' => 'fas fa-fw fa-user-plus',
                 ],
             ],
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'perfil',
-            'url' => 'admin / settings',
+            'text' => 'profile',
+            'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'change_password',
-            'url' => 'admin / settings',
+            'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Menu Filters
@@ -243,7 +223,7 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'location' => '//unpkg.com/sweetalert/dist/sweetalert.min.js',
                 ],
             ],
         ],

@@ -227,17 +227,17 @@
     },
     {
         "name": "egulias/email-validator",
-        "version": "2.1.11",
-        "version_normalized": "2.1.11.0",
+        "version": "2.1.10",
+        "version_normalized": "2.1.10.0",
         "source": {
             "type": "git",
             "url": "https://github.com/egulias/EmailValidator.git",
-            "reference": "92dd169c32f6f55ba570c309d83f5209cefb5e23"
+            "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/92dd169c32f6f55ba570c309d83f5209cefb5e23",
-            "reference": "92dd169c32f6f55ba570c309d83f5209cefb5e23",
+            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
+            "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
             "shasum": ""
         },
         "require": {
@@ -253,11 +253,11 @@
         "suggest": {
             "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
         },
-        "time": "2019-08-13T17:33:27+00:00",
+        "time": "2019-07-19T20:52:08+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.1.x-dev"
+                "dev-master": "2.0.x-dev"
             }
         },
         "installation-source": "dist",
@@ -648,27 +648,27 @@
     },
     {
         "name": "jeroennoten/laravel-adminlte",
-        "version": "v2.0.1",
-        "version_normalized": "2.0.1.0",
+        "version": "v1.26.0",
+        "version_normalized": "1.26.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
-            "reference": "61667b322561c0d0c21f995c329103552c5fb8e7"
+            "reference": "1b288c79af86a2738ff8f5eb9addbcd14bf26f4b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/61667b322561c0d0c21f995c329103552c5fb8e7",
-            "reference": "61667b322561c0d0c21f995c329103552c5fb8e7",
+            "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/1b288c79af86a2738ff8f5eb9addbcd14bf26f4b",
+            "reference": "1b288c79af86a2738ff8f5eb9addbcd14bf26f4b",
             "shasum": ""
         },
         "require": {
-            "laravel/framework": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
-            "php": ">=7.0.0"
+            "laravel/framework": "~5.1.12|~5.2.0|~5.3.0|~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+            "php": ">=5.5.9"
         },
         "require-dev": {
-            "phpunit/phpunit": "^6"
+            "phpunit/phpunit": "~4.0"
         },
-        "time": "2019-09-29T18:34:01+00:00",
+        "time": "2019-08-02T11:08:07+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -750,17 +750,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v5.5.47",
-        "version_normalized": "5.5.47.0",
+        "version": "v5.5.46",
+        "version_normalized": "5.5.46.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "0f538802144a41664f545fd92bbb556000cba115"
+            "reference": "85b2a5218088b0f60bf6e8c3a62891ba275a7269"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/0f538802144a41664f545fd92bbb556000cba115",
-            "reference": "0f538802144a41664f545fd92bbb556000cba115",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/85b2a5218088b0f60bf6e8c3a62891ba275a7269",
+            "reference": "85b2a5218088b0f60bf6e8c3a62891ba275a7269",
             "shasum": ""
         },
         "require": {
@@ -850,7 +850,7 @@
             "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (~3.3).",
             "symfony/psr-http-message-bridge": "Required to psr7 bridging features (~1.0)."
         },
-        "time": "2019-08-13T14:13:01+00:00",
+        "time": "2019-07-09T14:00:53+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -886,17 +886,17 @@
     },
     {
         "name": "laravel/tinker",
-        "version": "v1.0.10",
-        "version_normalized": "1.0.10.0",
+        "version": "v1.0.9",
+        "version_normalized": "1.0.9.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/tinker.git",
-            "reference": "ad571aacbac1539c30d480908f9d0c9614eaf1a7"
+            "reference": "eb0075527fdeeb1cc1d68bd4ca7d50256b30a827"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/tinker/zipball/ad571aacbac1539c30d480908f9d0c9614eaf1a7",
-            "reference": "ad571aacbac1539c30d480908f9d0c9614eaf1a7",
+            "url": "https://api.github.com/repos/laravel/tinker/zipball/eb0075527fdeeb1cc1d68bd4ca7d50256b30a827",
+            "reference": "eb0075527fdeeb1cc1d68bd4ca7d50256b30a827",
             "shasum": ""
         },
         "require": {
@@ -913,7 +913,7 @@
         "suggest": {
             "illuminate/database": "The Illuminate Database package (~5.1)."
         },
-        "time": "2019-08-07T15:10:45+00:00",
+        "time": "2019-07-29T18:09:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1230,21 +1230,21 @@
     },
     {
         "name": "myclabs/deep-copy",
-        "version": "1.9.3",
-        "version_normalized": "1.9.3.0",
+        "version": "1.9.2",
+        "version_normalized": "1.9.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/myclabs/DeepCopy.git",
-            "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea"
+            "reference": "8d0a041a565fc1e927e75f1d1bea5f34edf6e7d1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/007c053ae6f31bba39dfa19a7726f56e9763bbea",
-            "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea",
+            "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8d0a041a565fc1e927e75f1d1bea5f34edf6e7d1",
+            "reference": "8d0a041a565fc1e927e75f1d1bea5f34edf6e7d1",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1"
+            "php": "^7.2"
         },
         "replace": {
             "myclabs/deep-copy": "self.version"
@@ -1252,9 +1252,11 @@
         "require-dev": {
             "doctrine/collections": "^1.0",
             "doctrine/common": "^2.6",
+            "phpstan/phpstan": "^0.9.2",
+            "phpstan/phpstan-phpunit": "^0.9.4",
             "phpunit/phpunit": "^7.1"
         },
-        "time": "2019-08-09T12:45:53+00:00",
+        "time": "2019-08-09T12:38:39+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1343,17 +1345,17 @@
     },
     {
         "name": "nikic/php-parser",
-        "version": "v4.2.3",
-        "version_normalized": "4.2.3.0",
+        "version": "v4.2.2",
+        "version_normalized": "4.2.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/nikic/PHP-Parser.git",
-            "reference": "e612609022e935f3d0337c1295176505b41188c8"
+            "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e612609022e935f3d0337c1295176505b41188c8",
-            "reference": "e612609022e935f3d0337c1295176505b41188c8",
+            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
+            "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
             "shasum": ""
         },
         "require": {
@@ -1361,9 +1363,9 @@
             "php": ">=7.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
+            "phpunit/phpunit": "^6.5 || ^7.0"
         },
-        "time": "2019-08-12T20:17:41+00:00",
+        "time": "2019-05-25T20:07:01+00:00",
         "bin": [
             "bin/php-parse"
         ],
@@ -2708,17 +2710,17 @@
     },
     {
         "name": "sebastian/exporter",
-        "version": "3.1.1",
-        "version_normalized": "3.1.1.0",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/exporter.git",
-            "reference": "06a9a5947f47b3029d76118eb5c22802e5869687"
+            "reference": "234199f4528de6d12aaa58b612e98f7d36adb937"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/06a9a5947f47b3029d76118eb5c22802e5869687",
-            "reference": "06a9a5947f47b3029d76118eb5c22802e5869687",
+            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/234199f4528de6d12aaa58b612e98f7d36adb937",
+            "reference": "234199f4528de6d12aaa58b612e98f7d36adb937",
             "shasum": ""
         },
         "require": {
@@ -2729,7 +2731,7 @@
             "ext-mbstring": "*",
             "phpunit/phpunit": "^6.0"
         },
-        "time": "2019-08-11T12:43:14+00:00",
+        "time": "2017-04-03T13:19:02+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2748,10 +2750,6 @@
         ],
         "authors": [
             {
-                "name": "Sebastian Bergmann",
-                "email": "sebastian@phpunit.de"
-            },
-            {
                 "name": "Jeff Welch",
                 "email": "whatthejeff@gmail.com"
             },
@@ -2760,12 +2758,16 @@
                 "email": "github@wallbash.com"
             },
             {
-                "name": "Adam Harvey",
-                "email": "aharvey@php.net"
+                "name": "Bernhard Schussek",
+                "email": "bschussek@2bepublished.at"
             },
             {
-                "name": "Bernhard Schussek",
-                "email": "bschussek@gmail.com"
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            },
+            {
+                "name": "Adam Harvey",
+                "email": "aharvey@php.net"
             }
         ],
         "description": "Provides the functionality to export PHP variables for visualization",
@@ -4386,8 +4388,8 @@
         "authors": [
             {
                 "name": "Arne Blankerts",
-                "role": "Developer",
-                "email": "arne@blankerts.de"
+                "email": "arne@blankerts.de",
+                "role": "Developer"
             }
         ],
         "description": "A small library for converting tokenized PHP source code into XML and potentially other formats"

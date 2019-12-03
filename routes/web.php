@@ -19,12 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//rota table corretores
-
-Route::get('/corretores', 'CorretorController@index')->name('corretores.index');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Rotas da tabela corretores
+//Route::get('/corretores', 'CorretorController@index')->name('corretores.index');
+Route::resource('bibliotecario', 'bibliotecario');
 
 Auth::routes();
 

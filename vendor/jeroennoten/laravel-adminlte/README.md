@@ -1,4 +1,4 @@
-# Easy AdminLTE integration with Laravel
+# Easy AdminLTE integration with Laravel 5
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeroennoten/Laravel-AdminLTE.svg?style=flat-square)](https://packagist.org/packages/jeroennoten/Laravel-AdminLTE)
 [![Build Status](https://travis-ci.org/jeroennoten/Laravel-AdminLTE.svg?branch=master)](https://travis-ci.org/jeroennoten/Laravel-AdminLTE)
@@ -6,68 +6,31 @@
 [![StyleCI](https://styleci.io/repos/38200433/shield?branch=master)](https://styleci.io/repos/38200433)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeroennoten/Laravel-AdminLTE.svg?style=flat-square)](https://packagist.org/packages/jeroennoten/Laravel-AdminLTE)
 
-This package provides an easy way to quickly set up [AdminLTE v2](https://adminlte.io) with Laravel 5 or 6. It has no requirements and dependencies besides Laravel, so you can start building your admin panel immediately. The package just provides a Blade template that you can extend and advanced menu configuration possibilities. A replacement for the `make:auth` Artisan command that uses AdminLTE styled views instead of the default Laravel ones is also included.
-
-If you use Laravel 6, the version 2.0 or the branch laravel6-adminlte2 is compatible with this Laravel version. If you are using Laravel 5.x you need to use the 1.x version of the package.
+This package provides an easy way to quickly set up [AdminLTE](https://adminlte.io) with Laravel 5. It has no requirements and dependencies besides Laravel, so you can start building your admin panel immediately. The package just provides a Blade template that you can extend and advanced menu configuration possibilities. A replacement for the `make:auth` Artisan command that uses AdminLTE styled views instead of the default Laravel ones is also included.
 
 1. [Requirements](#1-requirements)
 2. [Installation](#2-installation)
-    1. [Laravel 5 (Package version 1.x)](#21---laravel-5-package-version-1x)
-    2. [Laravel 6.x (Package version 2.x)](#22---laravel-6x-package-version-2x)
 3. [Updating](#3-updating)
-    1. [Package version 1.x (Laravel 5)](#31---package-version-1x-laravel-5)
-    2. [Package version 2.x (Laravel 6)](#32---package-version-2x-laravel-6)
-    3. [Updating from Package 1.x (Laravel 5.x) to Package version 2.x (Laravel 6.x)](#33---updating-from-package-1x-laravel-5x-to-package-version-2x-laravel-6x)
-    4. [Breaking Changes](#34-breaking-changes)
 4. [Usage](#4-usage)
-5. [Configuration](#6-configuration)
-    1. [Menu](#61-menu)
-        - [Custom menu filters](#custom-menu-filters)
-        - [Menu configuration at runtime](#menu-configuration-at-runtime)
-        - [Active menu items](#active-menu-items)
+5. [The `make:adminlte` artisan command](#5-the-makeadminlte-artisan-command)
+   1. [Using the authentication views without the `make:adminlte` command](#41-using-the-authentication-views-without-the-makeadminlte-command)
+6. [Configuration](#6-configuration)
+   1. [Menu](#61-menu)
+     - [Custom menu filters](#custom-menu-filters)
+     - [Menu configuration at runtime](#menu-configuration-at-runtime)
+     - [Active menu items](#active-menu-items)
    2. [Plugins](#62-plugins)
-6. [Translations](#7-translations)
+7. [Translations](#7-translations)
     1. [Menu Translations](#71-menu-translations)
-7. [Customize views](#8-customize-views)
-8. [Issues, Questions and Pull Requests](#9-issues-questions-and-pull-requests)
+8. [Customize views](#8-customize-views)
+9. [Issues, Questions and Pull Requests](#9-issues-questions-and-pull-requests)
 
 ## 1. Requirements
 
-1. Package version 1.x :
-    - Laravel 5.5 to 5.8
-    - PHP >= 7.0
-
-2. Package version 2.x :
-    - Laravel 6.x
-    - PHP >= 7.2
+Laravel 5.5.x to 5.8.x
+PHP >= 7.0.0
 
 ## 2. Installation
-
-### 2.1 - Laravel 5 (Package version 1.x)
-
-1. Require the package using composer:
-
-    ```
-    composer require jeroennoten/laravel-adminlte "^1"
-    ```
-
-2. Publish the public assets:
-
-    ```
-    php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
-    ```
-   
-3. The make:adminlte artisan command
-
-    This package ships with a make:adminlte command that behaves exactly like make:auth (introduced in Laravel 5.2) but replaces the authentication views with AdminLTE style views.
-
-    ```
-    php artisan make:adminlte
-    ```
-
-    This command should be used on fresh applications, just like the make:auth command
-   
-### 2.2 - Laravel 6.x (Package version 2.x)
 
 1. Require the package using composer:
 
@@ -75,103 +38,33 @@ If you use Laravel 6, the version 2.0 or the branch laravel6-adminlte2 is compat
     composer require jeroennoten/laravel-adminlte
     ```
 
-2. Install the package using the command (For fresh laravel installations):
+2. Add the service provider to the `providers` in `config/app.php`:
+
+    > Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider
+
+    ```php
+    JeroenNoten\LaravelAdminLte\ServiceProvider::class,
+    ```
+
+3. Publish the public assets:
 
     ```
-    php artisan adminlte:install
+    php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
     ```
-   
-    > You can use --basic to avoid authentication scaffolding installation
-    >
-    > You can use --force to overwrite any file
-    >
-    > You can also use --interactive to be guided through the process and choose what you want to install
 
 ## 3. Updating
 
-### 3.1 - Package version 1.x (Laravel 5)
-
 1. To update this package, first update the composer package:
 
     ```
     composer update jeroennoten/laravel-adminlte
     ```
 
-2. Then, publish the public assets with the --force flag to overwrite existing files
+2. Then, publish the public assets with the `--force` flag to overwrite existing files
 
     ```
     php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets --force
-    ``` 
-
-### 3.2 - Package version 2.x (Laravel 6)
-
-1. To update this package, first update the composer package:
-
     ```
-    composer update jeroennoten/laravel-adminlte
-    ```
-
-2. Then, we need to update the assets, so run this command
-
-    ```
-    php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\AdminLteServiceProvider" --tag=assets --force
-    ```
-   
-### 3.3 - Updating from Package 1.x (Laravel 5.x) to Package version 2.x (Laravel 6.x)   
-   
-1. Updage your Laravel project from version 5.x to 6.x.
-   
-2. Then, update your `composer.json` file, so in the require section, modify it to:
-
-    ```
-    require: {
-        ...
-        "jeroennoten/laravel-adminlte": "^2.0",
-        ...
-    }
-    ```
-
-3. Run the composer update in your project folder:
-
-    ```
-    composer update jeroennoten/laravel-adminlte
-    ```
-
-4. Updating the assets:
-
-    In the package 2.x version, the assets locations where changed, so delete the folder adminlte inside your public/vendor folder.
-
-    And then use this command to publish new assets
- 
-    ```
-    php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\AdminLteServiceProvider" --tag=assets --force
-    ```
-
-5. If you have [published](#7-customize-views) and modified the default master, page views or login views, you will need to update them too.
-
-    Option 1:
-    - Make a copy of the views you modified.
-    - Publish the views again, using
-        ```
-       php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\AdminLteServiceProvider" --tag=views
-        ```
-   - Redo the modifications you did.
-  
-   Option 2:
-   - Modify in the css, js and other assets location in the master and page views.
-   
-### 3.4 Breaking Changes
-
-1. Version 1.25.1 to 1.26 and up:
-    - Plugins configuration was modified, check the new usage here: [Plugins](#62-plugins)
-
-2. Version 1.26 to 1.27 and up:
-
-    - iCheck plugin was replaced with [icheck-bootstrap](https://github.com/bantikyan/icheck-bootstrap). If you use the iCheck assets, make sure to check/modify the asset location.   
-
-3. Version 2.0 moved the assets file. Check the locations.
-
-    - If you modified the default views, edit then fixing the assets injection.
 
 ## 4. Usage
 
@@ -210,7 +103,7 @@ All sections are in fact optional. Your blade template could look like the follo
 @stop
 ```
 
-Note that you can also use `@stack` directive for `css` and `javascript`:
+Note that in Laravel 5.2 or higher you can also use `@stack` directive for `css` and `javascript`:
 
 ```html
 {{-- resources/views/admin/dashboard.blade.php --}}
@@ -222,19 +115,53 @@ Note that you can also use `@stack` directive for `css` and `javascript`:
 
 You now just return this view from your controller, as usual. Check out [AdminLTE](https://almsaeedstudio.com) to find out how to build beautiful content for your admin panel.
 
-## 5. Configuration
+## 5. The `make:adminlte` artisan command
 
-In Laravel 6, after the installation, you will notice a adminlte.php file in you config folder.
+> Note: only for Laravel 5.2 and higher
 
-As for Laravel 5 version, you will need to publish the configuration file manually using the command:
+This package ships with a `make:adminlte` command that behaves exactly like `make:auth` (introduced in Laravel 5.2) but replaces the authentication views with AdminLTE style views.
+
+```
+php artisan make:adminlte
+```
+
+This command should be used on fresh applications, just like the `make:auth` command
+
+### 5.1 Using the authentication views without the `make:adminlte` command
+
+If you want to use the included authentication related views manually, you can create the following files and only add one line to each file:
+
+- `resources/views/auth/login.blade.php`:
+```
+@extends('adminlte::login')
+```
+- `resources/views/auth/register.blade.php`
+```
+@extends('adminlte::register')
+```
+- `resources/views/auth/passwords/email.blade.php`
+```
+@extends('adminlte::passwords.email')
+```
+- `resources/views/auth/passwords/reset.blade.php`
+```
+@extends('adminlte::passwords.reset')
+```
+
+By default, the login form contains a link to the registration form.
+If you don't want a registration form, set the `register_url` setting to `null` and the link will not be displayed.
+
+## 6. Configuration
+
+First, publish the configuration file:
 
 ```
 php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=config
 ```
 
-Use this file to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments.
+Now, edit `config/adminlte.php` to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
 
-### 5.1 Menu
+### 6.1 Menu
 
 You can configure your menu as follows:
 
@@ -289,19 +216,6 @@ Use the `can` option if you want conditionally show the menu item. This integrat
         'can' => 'add-blog-post'
     ],
 ]
-```
-#### Adding a Search Input
-
-It's possible to add a search input in your menu, using a menu item with the following configuration:
-
-```php
-        [
-            'search' => true,
-            'href' => 'test',  //form action
-            'method' => 'POST', //form method
-            'input_name' => 'menu-search-input', //input name
-            'text' => 'Search', //input placeholder
-        ],
 ```
 
 #### Custom Menu Filters
@@ -417,7 +331,8 @@ To utilize regex, simply prefix your pattern with `regex:` and it will get evalu
 ]
 ```
 
-### 5.2 Plugins
+
+### 6.2 Plugins
 
 By default the [DataTables](https://datatables.net/), [Select2](https://select2.github.io/), [ChartJS](https://www.chartjs.org/), [Pace](http://github.hubspot.com/pace/docs/welcome/) and [SweetAlert2](https://sweetalert2.github.io/) plugins are supported and active, automatically injecting their CDN files. 
 
@@ -460,19 +375,20 @@ Color values: black, blue (default), green, orange, pink, purple, red, silver, w
 
 Theme values: barber-shop, big-counter, bounce, center-atom, center-circle, center-radar (default), center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, mac-osx, minimal
 
-## 6. Translations
+
+## 7. Translations
 
 At the moment, English, German, French, Dutch, Portuguese and Spanish translations are available out of the box.
 Just specifiy the language in `config/app.php`.
 If you need to modify the texts or add other languages, you can publish the language files:
 
 ```
-php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\AdminLteServiceProvider" --tag=translations
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=translations
 ```
 
 Now, you can edit translations or add languages in `resources/lang/vendor/adminlte`.
 
-### 6.1. Menu Translations
+### 7.1. Menu Translations
 
 This resource allow you to use lang files, and is active by default.
 
@@ -520,17 +436,18 @@ To translate the menu headers, just use the `header` param. Example:
         ],
 ```
 
-## 7. Customize views
+
+## 8. Customize views
 
 If you need full control over the provided views, you can publish them:
 
 ```
-php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\AdminLteServiceProvider" --tag=views
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=views
 ```
 
 Now, you can edit the views in `resources/views/vendor/adminlte`.
 
-## 8. Issues, Questions and Pull Requests
+## 9. Issues, Questions and Pull Requests
 
 You can report issues and ask questions in the [issues section](https://github.com/jeroennoten/Laravel-AdminLTE/issues). Please start your issue with `ISSUE: ` and your question with `QUESTION: `
 

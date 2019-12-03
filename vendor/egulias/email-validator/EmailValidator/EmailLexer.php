@@ -88,9 +88,6 @@ class EmailLexer extends AbstractLexer
         $this->previous = $this->token = self::$nullToken;
     }
 
-    /**
-     * @return void
-     */
     public function reset()
     {
         $this->hasInvalidTokens = false;
@@ -231,9 +228,6 @@ class EmailLexer extends AbstractLexer
         return false;
     }
 
-    /**
-     * @return string
-     */
     protected function getModifiers()
     {
         return 'iu';

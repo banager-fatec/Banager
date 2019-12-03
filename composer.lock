@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28ae16ffdfb7d7f754225ea2459f9ef8",
+    "content-hash": "721a207d29a9fee62f70c9d0d24fc89b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -419,24 +419,24 @@
         },
         {
             "name": "jeroennoten/laravel-adminlte",
-            "version": "v2.0.1",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
-                "reference": "61667b322561c0d0c21f995c329103552c5fb8e7"
+                "reference": "1b288c79af86a2738ff8f5eb9addbcd14bf26f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/61667b322561c0d0c21f995c329103552c5fb8e7",
-                "reference": "61667b322561c0d0c21f995c329103552c5fb8e7",
+                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/1b288c79af86a2738ff8f5eb9addbcd14bf26f4b",
+                "reference": "1b288c79af86a2738ff8f5eb9addbcd14bf26f4b",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
-                "php": ">=7.0.0"
+                "laravel/framework": "~5.1.12|~5.2.0|~5.3.0|~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "php": ">=5.5.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6"
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
@@ -468,7 +468,7 @@
                 "administrator",
                 "laravel"
             ],
-            "time": "2019-09-29T18:34:01+00:00"
+            "time": "2019-08-02T11:08:07+00:00"
         },
         {
             "name": "kylekatarnls/update-helper",
@@ -517,16 +517,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.47",
+            "version": "v5.5.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0f538802144a41664f545fd92bbb556000cba115"
+                "reference": "e3e8d585dcfab5abe6261b060f4df0d48f9924bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0f538802144a41664f545fd92bbb556000cba115",
-                "reference": "0f538802144a41664f545fd92bbb556000cba115",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e3e8d585dcfab5abe6261b060f4df0d48f9924bf",
+                "reference": "e3e8d585dcfab5abe6261b060f4df0d48f9924bf",
                 "shasum": ""
             },
             "require": {
@@ -647,7 +647,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-08-13T14:13:01+00:00"
+            "time": "2019-08-20T15:46:40+00:00"
         },
         {
             "name": "laravel/tinker",

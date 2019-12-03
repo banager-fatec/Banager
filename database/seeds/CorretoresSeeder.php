@@ -11,15 +11,15 @@ class CorretoresSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=1; $i <50; $i++) {
-        DB::table('corretores')->insert(
+        for ($i=1; $i < 50; $i++) {
+            DB::table('corretor')->insert(
                 [
                     'nome' => str_random(70),
                     'creci' => str_random(15),
-                    'email' => str_random(10).'@gmail.com',
+                    'email' => str_random(10) . '@gmail.com',
                     'fone' => str_random(15)
                 ]
-            ) ;
+            );
         }
     }
 }
