@@ -3,13 +3,13 @@
 @section('title', 'biblioteca')
 
 @section('content_header')
-    <h1><i class="fas fa-bars"></i>  Listar Corretores</h1>
+    <h1><i class="fas fa-bars"></i>  Listar Bibliotecario</h1>
 @stop
 
 @section('content')
 <div class="panel panel-default">
     <div class="panel-heading clearfix">
-        Relaçao dos Corretores
+        Relaçao dos Bibliotecario
         <div class="pull-right">
             <a href="{{ route('bibliotecario.index') }}" class="btn btn-info"><i class="fas fa-sync"></i> Atualizar a tela</a>
             <a href="{{ route('bibliotecario.create') }}" class="btn btn-success"><i class="fas fa-plus"></i> Inserir um Novo Registro</a>
@@ -26,7 +26,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($corretores as $corretor)
+                @foreach($bibliotecarios as $bibliotecario)
                 <tr>
                     <td>{{ $bibliotecario->id }}</td>
                     <td>{{ $bibliotecario->nome }}</td>

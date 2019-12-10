@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'ImóvelSJC',
+    'title' => 'imovel',
 
     'title_prefix' => '[',
 
@@ -109,16 +109,16 @@ return [
     'menu' => [
         ['header' => 'main_navigation'],
         [
-            'text'        => 'Corretores',
+            'text'        => 'Bibliotecario',
             'icon'        => 'fas fa-fw fa-users',
             'submenu' => [
                 [
-                    'text' => 'Listar Corretores',
+                    'text' => 'Listar Bibliotecario',
                     'icon' => 'fas fa-fw fa-bars',
-                    'route' => 'corretores.index',
+                    'route' => 'bibliotecario.index',
                 ],
                 [
-                    'text' => 'Incluir Corretor',
+                    'text' => 'Incluir Bibliotecario',
                     'icon' => 'fas fa-fw fa-user-plus',
                 ],
             ],

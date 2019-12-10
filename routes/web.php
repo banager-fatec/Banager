@@ -11,18 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'BibliotecarioController@index')->name('bibliotecario');
+Route::get('/bibliotecario', 'BibliotecarioController@index')->name('bibliotecario');
 
-// Rotas da tabela corretores
-//Route::get('/corretores', 'CorretorController@index')->name('corretores.index');
-Route::resource('bibliotecario', 'bibliotecario');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Rotas da tabela bibliotecario
+//Route::get('/bibliotecario', 'BibliotecarioController@index')->name('bibliotecario.index');
+Route::resource('bibliotecario', 'BibliotecarioController');

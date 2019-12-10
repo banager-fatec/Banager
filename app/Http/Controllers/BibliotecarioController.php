@@ -14,9 +14,9 @@ class BibliotecarioController extends Controller
      */
     public function index()
     {
-       $bibliotecarios = Bibliotecario::all;
+       $bibliotecarios = Bibliotecario::all();
 
-       return view('bibliotecarios.index', compact("bibliotecarios"));
+       return view('bibliotecario.index', compact("bibliotecarios"));
     }
 
     /**
@@ -26,7 +26,7 @@ class BibliotecarioController extends Controller
      */
     public function create()
     {
-       return view('biblioetecarios.create'):
+       return view('bibliotecario.create');
     }
 
     /**
