@@ -15,6 +15,8 @@ Auth::routes();
 
 Route::get('/', 'BibliotecarioController@index')->name('bibliotecario');
 Route::get('/bibliotecario', 'BibliotecarioController@index')->name('bibliotecario');
+Route::post('/a', 'BibliotecarioController@enviar');
+
 
 // Rotas da tabela bibliotecario
 //Route::get('/bibliotecario', 'BibliotecarioController@index')->name('bibliotecario.index');

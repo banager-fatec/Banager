@@ -3,13 +3,13 @@
 @section('title', 'biblioteca')
 
 @section('content_header')
-<h1>Detalhes do Corretor</h1>
+<h1>Detalhes do bibliotecario</h1>
 @stop
 
 @section('content')
 <div class="panel panel-default">
     <div class="panel-heading">
-        Detalhes do cadastro do corretor
+        Detalhes do cadastro do bibliotecario
     </div>
 
     <div class="panel-body">

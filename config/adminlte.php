@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Imóvel</b>SJC',
+    'logo' => '<b>BANAGER</b>',
 
-    'logo_mini' => '<b>Imo</b>',
+    'logo_mini' => '<b>Emo</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'black',
 
     /*
     |--------------------------------------------------------------------------
@@ -109,8 +109,8 @@ return [
     'menu' => [
         ['header' => 'main_navigation'],
         [
-            'text'        => 'Bibliotecario',
-            'icon'        => 'fas fa-fw fa-users',
+            'text' => 'Bibliotecario',
+            'icon' => 'fas fa-fw fa-users',
             'submenu' => [
                 [
                     'text' => 'Listar Bibliotecario',
@@ -120,6 +120,7 @@ return [
                 [
                     'text' => 'Incluir Bibliotecario',
                     'icon' => 'fas fa-fw fa-user-plus',
+                    'route' => 'bibliotecario.create',
                 ],
             ],
         ],

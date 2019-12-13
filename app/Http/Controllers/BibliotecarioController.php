@@ -19,6 +19,7 @@ class BibliotecarioController extends Controller
        return view('bibliotecario.index', compact("bibliotecarios"));
     }
 
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -85,6 +86,17 @@ class BibliotecarioController extends Controller
                 'CPF' => $request->CPF
             ]
         );
+    }
+
+    public function enviar(Request $request)
+    {
+        $bibliotecario = new Bibliotecario();
+        $bibliotecario->nome = $request->nome;
+        $bibliotecario->CPF = $request->CPF;
+        $bibliotecario->senha = $request->senha;
+        $bibliotecario->save();
+
+        return redirect('/bibliotecario');
     }
 
     /**

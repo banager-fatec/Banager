@@ -22,7 +22,6 @@
                     <td>ID</td>
                     <td>Nome do bibliotecario</td>
                     <td>CPF</td>
-                    <td>Açoes</td>
                 </tr>
             </thead>
             <tbody>
@@ -33,7 +32,7 @@
                     <td>{{ $bibliotecario->CPF}}</td>
                     <td>
                         <!-- botao de detalhes do registro -->
-                        <a href="{{ route('bibliotecario.show', $corretor) }}" class="btn btn-xs btn-primary">
+                        <a href="{{ route('bibliotecario.show', $bibliotecario) }}" class="btn btn-xs btn-primary">
                             <i class="fas fa-fx fa-eye"></i>
                         </a>
 
@@ -43,7 +42,7 @@
                         </a>
 
                         <!-- botao de exclusao -->
-                        <form action="{{ route('bibliotecario.destroy', $corretor) }}" method="post" onsubmit="return confirm('Você tem certeza de que quer excluir este registro?');" style="display: inline-block;">
+                        <form action="{{ route('bibliotecario.destroy', $bibliotecario) }}" method="post" onsubmit="return confirm('Você tem certeza de que quer excluir este registro?');" style="display: inline-block;">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

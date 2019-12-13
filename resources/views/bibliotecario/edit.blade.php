@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('bibliotecario.update', $corretor->id) }}" enctype="multipart/form-data">
+<form method="post" action="{{ route('bibliotecario.update', $bibliotecario->id) }}" enctype="multipart/form-data">
      {{ csrf_field() }}
      <input type="hidden" name="_method" value="PUT">
 
@@ -19,24 +19,24 @@
           <div class="panel-body">
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label for="nome">Nome do biliotecario <span class="text-red">*</span></label>
-                         <input type="text" name="nome" id="nome" class="form-control" required value="{{ $corretor->nome }}">
+                         <label for="nome">Nome do biliotecario<span class="text-red"></span></label>
+                         <input type="text" name="nome" id="nome" class="form-control" required value="{{ $bibliotecario->nome }}">
                     </div>
                </div>
 
                <div class="row">
                     <div class="form-group col-md-3">
                          <label for="fone">senha</label>
-                         <input type="text" name="senha" id="senha" class="form-control" value="{{ $corretor->fone }}">
+                         <input type="text" name="senha" id="senha" class="form-control" value="{{ $bibliotecario->fone }}">
                     </div>
                </div>
 
                <a href="{{ route('bibliotecario.index') }}" class="btn btn-default">
-                    <i class="fas fa-reply"></i> Voltar
+                    <i class="fas fa-reply"></i>Voltar
                </a>
 
                <button type="submit" class="btn btn-success">
-                    <i class="fas fa-save"></i> Gravar
+                    <i class="fas fa-save"></i>Gravar
                </button>
           </div>
      </div>
